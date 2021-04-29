@@ -21956,6 +21956,49 @@
 .hero-area {
   padding: 50px 0;
 }
+.number {
+  color: #11BFAE !important;
+}
+
+.bmd-label-floating {
+  color: #f1f1f1;
+}
+
+.primary-btn{
+  cursor: pointer;
+  position: relative;
+  z-index: 9;
+  display: block;
+  background: linear-gradient(
+60deg
+, rgba(242,39,93,1) -0.21%, #11BFAE 71.26%);
+  background-size: 150% auto;
+  width: 100%;
+  /* max-width: 400px; */
+  float: left;
+  text-align: center;
+  color: #fff;
+  padding: 15px 10px;
+  font-size: 26px;
+  line-height: 35px;
+  font-family: 'NunitoSansBold', sans-serif;
+  font-weight: 700;
+  border-radius: 65px;
+  letter-spacing: 2px;
+  border: none;
+  transition: 0.3s;
+}
+.primary-btn:hover {
+  transform: scale(1.06);
+  background-size: 100% auto;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btnAccent {
+  background: rgb(242,160,61);
+  background: linear-gradient(90deg, rgba(242,160,61,1) 0%, rgba(242,39,93,1) 100%, rgba(17,191,174,1) 100%, rgba(0,0,0,1) 100%);
+}
 
 @media (min-width: 768px) {
   .hero-area {
@@ -21965,12 +22008,13 @@
 
 .hero-content h1 {
   color: #1f1f1f;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 38px;
   font-weight: 700;
   letter-spacing: -2.33px;
   line-height: 45px;
   margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #ccc;
 }
 
 @media (min-width: 480px) {
@@ -22012,11 +22056,13 @@
 
 .hero-content p {
   color: #666666;
-  font-family: "Karla", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
+  /* font-family: "Karla", sans-serif; */
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: -0.4px;
-  line-height: 25px;
+  line-height: 49px;
+    font-size: 33px;
+    color: #000;
+    text-shadow: 1px 1px 2px #ccc;
 }
 
 @media (min-width: 480px) {
@@ -22042,8 +22088,8 @@
 
 @media (min-width: 992px) {
   .hero-content p {
-    line-height: 36px;
-    font-size: 21px;
+    line-height: 49px;
+    font-size: 33px;
   }
 }
 
@@ -22092,6 +22138,23 @@
   margin-bottom: 10px;
 }
 
+.hero-btn .btn{
+  width: 280px;
+}
+
+.blankSeparator{
+  height: 100px;
+}
+
+.contactUs_address {
+  color: #f1f1f1;
+  padding: 13% 10%;
+}
+
+.contactUs_address h3 {
+  padding: 20px 0;
+}
+
 @media (min-width: 992px) {
   .hero-content .hero-btn {
     margin-top: 28px;
@@ -22099,7 +22162,7 @@
 }
 
 .hero-content .hero-btn .btn {
-  height: 40px;
+  height: auto;
   font-size: 16px;
   letter-spacing: -1px;
   min-width: 137px;
@@ -22107,7 +22170,7 @@
 
 @media (min-width: 992px) {
   .hero-content .hero-btn .btn {
-    height: 60px;
+    height: auto;
     min-width: 209px;
     letter-spacing: -0.9px;
     font-size: 18px;
@@ -22117,6 +22180,11 @@
 .hero-media {
   position: relative;
   margin-top: 20px;
+  text-align: center;
+}
+
+.hero-media img {
+  height: 300px;
 }
 
 @media (min-width: 768px) {
@@ -23188,6 +23256,7 @@
   overflow: hidden;
   top: -68px;
   overflow: hidden;
+  position: absolute;right: 0;
 }
 
 .footer-shape-2 {
