@@ -5,7 +5,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title></title>
+  <title>SA Global | The #1 Detergent in the Africa</title>
+
+  <!-- Site Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="image/siteicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="image/siteicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="image/siteicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="image/siteicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="image/siteicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="image/siteicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="image/siteicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="image/siteicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="image/siteicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="image/siteicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="image/siteicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="image/siteicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="image/siteicon/favicon-16x16.png">
+  <link rel="manifest" href="image/siteicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="image/siteicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
   <!-- Plugins CSS -->
   <link rel="stylesheet" href="./plugins/bootstrap-4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="./plugins/meanmenu/meanmenu.css">
@@ -43,19 +63,7 @@
         <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
       </svg>
 </div> -->
-<?php
-session_start();
-if (isset($_SESSION['status'])) {
-	//$status = $_SESSION['status'];
-	if($_SESSION['status']=1){
-		echo "<script>alert('We will get in touch with you.')</script>";
-	}else {
-  echo "<script>alert('Some error occured while sending mail')</script>";
-}
-unset($_SESSION['status']);
-} 
 
-?>
 <div class="site-wrapper">
   <div class="overlay">
     <div class="bottom-layer"></div>
