@@ -1,5 +1,9 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -12,29 +16,44 @@ require 'PHPMailer/src/SMTP.php';
 $mail = new PHPMailer(true);
 
 try {
+	
     //Server settings
     $mail->SMTPDebug = 0;                      //Enable verbose debug output  //SMTP::DEBUG_SERVER
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->Host       = 'smtp.ipage.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = '**';           //change here          //SMTP username
-    $mail->Password   = '******';       //change here          //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption //PHPMailer::ENCRYPTION_SMTPS
-    $mail->Port       = 587;                                 //465   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-
-    if(isset($_POST['submit'])){
+    $mail->Username   = 'noreply@saglobal.rw';           //change here          //SMTP username
+    $mail->Password   = 'P@ssword2021';       //change here          //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;     //Enable implicit TLS encryption //PHPMailer::ENCRYPTION_SMTPS  //PHPMailer::ENCRYPTION_STARTTLS; 
+    $mail->Port       = 465;                                //465   //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    
+    //if(isset($POST['submit'])){
         $to = "contact@saglobal.rw"; // this is your Email address
-        $from = $_POST['email']; // this is the sender's Email address
-        $phone = $_POST['phone'];
-        $first_name = $_POST['firstName'];
-        $last_name = $_POST['lastName'];
-        $message = $_POST['message'];
+        $from = $_REQUEST['email']; // this is the sender's Email address
+        $phone = $_REQUEST['phone'];
+        $first_name = $_REQUEST['firstName'];
+        $last_name = $_REQUEST['lastName'];
+        $message = $_REQUEST['message'];
         $subject = "SA Global Query";
-
+		$ipAddress = get_client_ip();
+		// Use JSON encoded string and converts
+		// it into a PHP variable
+		$ipdat = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=" . $ipAddress));
+		
+		$countryName = $ipdat->geoplugin_countryName;
+		$cityName= $ipdat->geoplugin_city;
+		$continentName= $ipdat->geoplugin_continentName;
+		$latitude= $ipdat->geoplugin_latitude;
+		$longitude= $ipdat->geoplugin_longitude;
+		$currencySymbol= $ipdat->geoplugin_currencySymbol;
+		$currencyCode= $ipdat->geoplugin_currencyCode;
+		$timezone= $ipdat->geoplugin_timezone;
+		
         //Recipients
-        $mail->setFrom($from, $first_name.' '.$last_name);
-        $mail->addAddress('musique.suman@gmail.com', $first_name.' '.$last_name);     //Add a recipient
+        $mail->setFrom('noreply@saglobal.rw', "SA Global No Reply");
+        $mail->addAddress('saglobalrw@gmail.com', "Business");     //Add a recipient
         $mail->addAddress($to, 'SA Global'); //Name is optional
+		//$mail->addAddress('musique.suman@gmail.com', 'SA Global'); 
         //$mail->addReplyTo('info@example.com', 'Information');
         //$mail->addCC('musique.suman@gmail.com');
         //$mail->addBCC('bcc@example.com');
@@ -43,32 +62,80 @@ try {
        // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
         //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
 
+		$adminTemplate = file_get_contents("inc/admin-template.php");
+		//Replace template value
+		$body = str_replace("{{customerEmail}}", $from, $adminTemplate);
+		$body = str_replace("{{customerName}}", $first_name.' '.$last_name, $body);
+		$body = str_replace("{{customerPhone}}", $phone, $body);
+		$body = str_replace("{{customerQuery}}", $message, $body);
+		$body = str_replace("{{customerIP}}", $ipAddress, $body);
+		
+		$body = str_replace("{{countryName}}", $countryName, $body);
+		$body = str_replace("{{cityName}}", $cityName, $body);
+		$body = str_replace("{{continentName}}", $continentName, $body);
+		$body = str_replace("{{latitude}}", $latitude, $body);
+		$body = str_replace("{{longitude}}", $longitude, $body);
+		$body = str_replace("{{currencySymbol}}", $currencySymbol, $body);
+		$body = str_replace("{{currencyCode}}", $currencyCode, $body);
+		$body = str_replace("{{timezone}}", $timezone, $body);
+
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = $subject;
-        $mail->Body    = '<b>SA Global Query</b><br/>Name: ' . $first_name . ' ' .$last_name . '<br>Phone: ' . $phone . '<br>Query: '. $message;
-        $mail->AltBody = $first_name . ' ' . $last_name . 'Mobile: ' .$phone. 'Message: ' .$message;
+        $mail->Body    = $body;
+        $mail->AltBody = $first_name . ' ' . $last_name . 'Mobile: ' .$phone. 'Message: ' .$message. 'IP Address: ' .$ipAddress;
 
         $mail->send();
-        //echo 'Message has been sent';
+         //echo 'Message has been sent';
 		
-		session_start();
+		//session_start();
 		
-		$_SESSION['status'] = 1;
+		//$_SESSION['status'] = 1;
 		
 		
-		header('Location: index.php');
-		exit;
-    }
+		//header('Location: index.php');
+		//exit;
+
+		//echo 'something.'.$_REQUEST['email'];
+        //send the message, check for errors
+        if (!$mail->send()) { 
+            $result = array('status'=>"error", 'message'=>"Mailer Error: ".$mail->ErrorInfo);//
+            echo json_encode($result);
+			//echo $_REQUEST['email'];
+        } else {
+            $result = array('status'=>"success", 'message'=>"Message sent.");
+            echo json_encode($result);
+			//echo 'error';
+        }
+    //}
 
     
 } catch (Exception $e) {
-	session_start();
+	//session_start();
 		
-	$_SESSION['status'] = 0;
+	//$_SESSION['status'] = 0;
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
-//https://accounts.google.com/b/3/DisplayUnlockCaptcha
+
+// Function to get the client IP address
+function get_client_ip() {
+    $ipaddress = '';
+    if (isset($_SERVER['HTTP_CLIENT_IP']))
+        $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+    else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    else if(isset($_SERVER['HTTP_X_FORWARDED']))
+        $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+    else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+        $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+    else if(isset($_SERVER['HTTP_FORWARDED']))
+        $ipaddress = $_SERVER['HTTP_FORWARDED'];
+    else if(isset($_SERVER['REMOTE_ADDR']))
+        $ipaddress = $_SERVER['REMOTE_ADDR'];
+    else
+        $ipaddress = 'UNKNOWN';
+    return $ipaddress;
+}
 ?>
 
