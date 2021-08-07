@@ -33,6 +33,11 @@
 </head>
 
 <body>
+<div class="loader loader-container" style="display:none;">
+        <svg class="spinner" viewBox="0 0 50 50">
+            <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+        </svg>
+    </div>
 <!-- <div class="loader-container" style="display:none;">
     <svg class="spinner" viewBox="0 0 50 50">
         <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
@@ -574,8 +579,7 @@ District</p> -->
           <div style="width: 100%; height: 500px;">
             <!-- Form -->
 
-            <form name="contactForm" action="sendmail.php" method="POST" class="form-container"
-            onsubmit="return validateForm()">
+            <form id="contactForm" name="contactForm" method="POST" class="form-container">
             <div class="form-group">
                 <label for="firstName" class="bmd-label-floating">First Name</label>
                 <input type="text" name="firstName" class="form-control" required id="firstName">
@@ -602,11 +606,15 @@ District</p> -->
             
             <div class="form-group is-focused-force">
               <label for="phone-number" class="bmd-label-floating">Message</label>
-              <textarea class="textarea"  name="message"></textarea>
+              <textarea class="textarea form-control" id="message" name="message"></textarea>
               <!-- <div class="error-label" id="phoneErr"></div> -->
           </div>
-
+			
             <input type="submit" name="submit" class="primary-btn btn--hover-shine  submit" value="Submit" />
+			
+			<div id="ResponseMessage">
+				<p style="margin-top: 45px;"></p>
+			</div>
           </div>
         </div>
       </div>
@@ -629,7 +637,6 @@ District</p> -->
   </div>
   <div class="shape-holder faq-shape" data-aos="zoom-in-right" data-aos-once="true"><img src="image/faq-shape.svg" alt=""></div>
 </section>
-
 
 
 <!-- Footer Section -->
@@ -716,6 +723,78 @@ District</p> -->
 
   <!-- Custom JS -->
   <script src="./js/active.js"></script>
+  <script>
+// Variable to hold request
+var request;
+$('#contactForm').submit(function(e) {
+
+// Prevent default posting of form - put here to work in case of errors
+    event.preventDefault();
+
+    // Abort any pending request
+    if (request) {
+        request.abort();
+    }
+    // setup some local variables
+    var $form = $(this);
+
+	// Let's select and cache all the fields
+    var $inputs = $form.find("input, select, textarea");
+	
+	 // Serialize the data in the form
+    var serializedData = $form.serialize();
+	
+	// Let's disable the inputs for the duration of the Ajax request.
+    // Note: we disable elements AFTER the form data has been serialized.
+    // Disabled form elements will not be serialized.
+    $inputs.prop("disabled", true);
+	$(".loader").show();
+	// Fire off the request to /form.php
+    request = $.ajax({
+        url: "/sendmail.php",
+        type: "post",
+        data: serializedData
+    });
+	
+	 // Callback handler that will be called on success
+    request.done(function (response, textStatus, jqXHR){
+		
+		$(".loader").hide();
+		
+		$(".form-control").val('');
+		
+		$("#ResponseMessage").show();
+		$("#ResponseMessage p").text("Email sent successfully. We will get in touch with you shortly.");
+		
+		setTimeout(function() {
+			$("#ResponseMessage").hide();
+		}, 3000);
+		
+        // Log a message to the console
+        //console.log("Hooray, it worked!");
+    });
+
+    // Callback handler that will be called on failure
+    request.fail(function (jqXHR, textStatus, errorThrown){
+        // Log the error to the console
+		$("#ResponseMessage p").text("There were some issues with sending email. Please contact later.");
+         console.log(
+             "The following error occurred: "+
+             textStatus, errorThrown
+         );
+    });
+
+    // Callback handler that will be called regardless
+    // if the request failed or succeeded
+    request.always(function () {
+        // Reenable the inputs
+		$(".loader").hide();
+        $inputs.prop("disabled", false);
+    });
+
+
+});
+    </script>
 </body>
 
 </html>
