@@ -43,7 +43,7 @@
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Oswald:wght@200;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./fonts/ep-icon-fonts/css/style.css">
+  <link rel="stylesheet" href="./fonts/ep-icon-fonts/css/style.min.css">
   <link rel="stylesheet" href="./fonts/fontawesome-5/css/all.min.css">
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="./css/settings.min.css">
@@ -83,7 +83,7 @@
                 <div class="col-sm-3 col-6 col-lg-2 col-xl-2 order-lg-1">
                   <!-- Brand Logo -->
                     <div class="brand-logo">
-                        <a href=""><img src="image/logo/logoblack.png" alt="logo" title="SAGLOBAL" /></a>
+                        <a href=""><img src="image/logo/logoblack.webp" alt="logo" title="SAGLOBAL" /></a>
                     </div>
                 </div>
                 <div class="col-sm-8 col-lg-2 col-xl-2 d-none d-sm-block order-lg-3">
@@ -161,7 +161,7 @@
 RDB will be located at the kigali special economic zone phase two,Msoro,Gasabo
 District</p> -->
 <p>Producer of Soap & Detergent based in Rwanda</p>
-          <div class="hero-btn"><a href="#productline" class="btn primary-btn btn--hover-shine">Product-line</a></div>
+          <div class="hero-btn"><a href="#productline" class="btn primary-btn btn--hover-shine">Product Line</a></div>
           <!-- <div class="rating"> -->
             <!-- <div class="icon"> -->
               <!-- <i class="fas fa-star active"></i> -->
@@ -177,7 +177,7 @@ District</p> -->
 
       <div class="col-xl-6 col-lg-6 col-md-5 col-12">
         <div class="hero-media">
-          <img src="image/product/ozzy_transparent.png" alt="OZZY" title="OZZY Detergent">
+          <img src="image/product/ozzy_transparent.webp" alt="OZZY" title="OZZY Detergent">
           <!-- <a class="video-play-trigger" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"><i class="icon icon-triangle-right-17-2"></i></a>
           <div class="media-shape animate-spin"><img src="image/media-shape.png" alt="">-->
           </div> 
@@ -439,16 +439,16 @@ District</p> -->
 </section>
 
 <!-- Aurthor Starts -->
-<div class="aurthor-section">
+<div  id="productline" class="aurthor-section">
   <div class="container">
     <div class="row  spacing-bottom mb--10">
       <div class=" col-lg-5 col-md-4" data-aos="zoom-in-right"  data-aos-once="true" data-aos-delay="55" data-aos-duration="1500">
         <div class="aurthor-image">
-          <img src="image/product/product.jpeg" alt="OZZY">
+          <img src="image/product/product.webp" alt="OZZY">
         </div>
       </div>
 
-      <div  id="productline" class="col-lg-6 offset-md-1 col-md-6" data-aos="zoom-in-left"  data-aos-once="true" data-aos-delay="55" data-aos-duration="1500">
+      <div  class="col-lg-6 offset-md-1 col-md-6" data-aos="zoom-in-left"  data-aos-once="true" data-aos-delay="55" data-aos-duration="1500">
         <div class="aurthor-content">
           <!-- <span class="account">@something</span> -->
           <h2>OZZY</h2>

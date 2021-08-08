@@ -5,18 +5,23 @@ Generated using nucleoapp.com
 
 -------------------------------- */
 @font-face {
-  font-family: 'ep';
-  src: url('../fonts/ep.eot');
-  src: url('../fonts/ep.eot') format('embedded-opentype'), url('../fonts/ep.woff2') format('woff2'), url('../fonts/ep.woff') format('woff'), url('../fonts/ep.ttf') format('truetype'), url('../fonts/ep.svg') format('svg');
+  font-family: "ep";
+  src: url("../fonts/ep.eot");
+  src: url("../fonts/ep.eot") format("embedded-opentype"),
+    url("../fonts/ep.woff2") format("woff2"),
+    url("../fonts/ep.woff") format("woff"),
+    url("../fonts/ep.ttf") format("truetype"),
+    url("../fonts/ep.svg") format("svg");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 /*------------------------
 	base class definition
 -------------------------*/
 .icon {
   display: inline-block;
-  font: normal normal normal 1em/1 'ep';
+  font: normal normal normal 1em/1 "ep";
   speak: none;
   text-transform: none;
   /* Better Font Rendering */
@@ -489,4 +494,3 @@ Generated using nucleoapp.com
 .icon-tablet-mobile::before {
   content: "\ea5b";
 }
-

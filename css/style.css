@@ -22074,9 +22074,9 @@ html {
   font-family: "Montserrat", sans-serif;
   letter-spacing: -0.4px;
   line-height: 49px;
-  font-size: 33px;
+  font-size: 28px;
   color: #000;
-  text-shadow: 1px 1px 2px #ccc;
+  text-shadow: 1px 1px 2px #fff;
 }
 
 @media (min-width: 480px) {
