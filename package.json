@@ -1,0 +1,27 @@
+{
+  "name": "saglobal",
+  "version": "1.0.0",
+  "description": "Rwanda website",
+  "main": "gruntfile.js",
+  "dependencies": {
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-uncss": "^0.10.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumanbaul/SAGlobal.git"
+  },
+  "keywords": [
+    "saglobal"
+  ],
+  "author": "suman baul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumanbaul/SAGlobal/issues"
+  },
+  "homepage": "https://github.com/sumanbaul/SAGlobal#readme"
+}

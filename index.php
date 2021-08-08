@@ -5,6 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <meta name="description" content="The Laundry detergent business unit in Kigali, Rwanda from S.A Global Ltd. Ozzy the number one detergent in Africa.">
+  <meta name="keywords" content="Ozzy, SAGLOBAL, SA Global, SA Global Ltd, Detergent, Africa detergent, best detergent, washing, washing powder">
+  <meta name="author" content="Suman Baul">
+  <meta name="robots" content="index, follow" />
+  
+  <meta name="google-site-verification" content="gaPlu_8MP-g2rbpNeBenmvbpG4d5KXr5w0JPcgM7-WY" />
+
   <title>SA Global | The #1 Detergent in the Africa</title>
 
   <!-- Site Icon -->
@@ -27,19 +35,19 @@
   <meta name="theme-color" content="#ffffff">
 
   <!-- Plugins CSS -->
-  <link rel="stylesheet" href="./plugins/bootstrap-4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./plugins/meanmenu/meanmenu.css">
-  <link rel="stylesheet" href="./plugins/slick-1.8.1/slick.css">
-  <link rel="stylesheet" href="./plugins/fancybox-master/jquery.fancybox.min.css">
-  <link rel="stylesheet" href="./plugins/aos-animation/aos.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./plugins/meanmenu/meanmenu.min.css">
+  <!-- <link rel="stylesheet" href="./plugins/slick-1.8.1/slick.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Oswald:wght@200;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./fonts/ep-icon-fonts/css/style.css">
   <link rel="stylesheet" href="./fonts/fontawesome-5/css/all.min.css">
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="./css/settings.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/settings.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
 
    <!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CJPQZ8TN02"></script>
@@ -126,7 +134,16 @@
                             <li class="menu-item"><a href="#contactus">Contact Us</a></li>
                             </ul>
                     </div>
-                    <div class="mobile-menu"></div>
+                    <div class="mobile-menu">
+                    </div>
+                    <!-- <div id="nav-icon2">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -160,7 +177,7 @@ District</p> -->
 
       <div class="col-xl-6 col-lg-6 col-md-5 col-12">
         <div class="hero-media">
-          <img src="image/product/ozzy_transparent.png" alt="">
+          <img src="image/product/ozzy_transparent.png" alt="OZZY" title="OZZY Detergent">
           <!-- <a class="video-play-trigger" data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"><i class="icon icon-triangle-right-17-2"></i></a>
           <div class="media-shape animate-spin"><img src="image/media-shape.png" alt="">-->
           </div> 
@@ -168,7 +185,7 @@ District</p> -->
       </div>
     </div>
   </div>
-  <div class="shape-holder hero-shape" data-aos="fade-right" data-aos-once="true"><img src="image/hero-orange-shape.svg" alt=""></div>
+  <div class="shape-holder hero-shape" data-aos="fade-right" data-aos-once="true"><img src="image/hero-orange-shape.svg" alt="shape"></div>
 </div>
 
 <!-- Facts Section -->
@@ -203,7 +220,7 @@ District</p> -->
                           </div>
                 
                           <div class="card-icon">
-                            <img src="image/fact-2.png" alt="">
+                            <img src="image/fact-2.png" alt="location">
                           </div>
                         </div>
                 </div>
@@ -216,7 +233,7 @@ District</p> -->
                           </div>
                 
                           <div class="card-icon">
-                            <img src="image/fact-3.png" alt="">
+                            <img src="image/fact-3.png" alt="customer">
                           </div>
                         </div>
                 </div>
@@ -229,7 +246,7 @@ District</p> -->
                           </div>
                 
                           <div class="card-icon">
-                            <img src="image/fact-4.png" alt="">
+                            <img src="image/fact-4.png" alt="product">
                           </div>
                         </div>
                 </div>
@@ -243,13 +260,13 @@ District</p> -->
 <!-- Course section -->
 <section class="course-section position-relative">
   <div class="shape-holder">
-    <img src="./image/section-2-shape-bg.svg" alt="">
+    <img src="./image/section-2-shape-bg.svg" alt="shape">
   </div>
   <div class="shape-holder" data-aos="zoom-in"  data-aos-once="true">
-    <img src="./image/section-2-shape.svg" alt="">
+    <img src="./image/section-2-shape.svg" alt="shape">
   </div>
   <div class="shape-holder course-shape-3" data-aos="zoom-in-left" data-aos-once="true">
-    <img src="./image/course-yelloow-svg.svg" alt="">
+    <img src="./image/course-yelloow-svg.svg" alt="shape">
   </div>
   <div class="container pt-lg--85">
     <div class="row justify-content-center">
@@ -267,7 +284,7 @@ District</p> -->
               <div class="col-xl-12 col-lg-12">
                 <div class="acc-left-content d-flex">
                   <div class="acc-icon">
-                    <img src="./image/course-acc-icon.svg" alt="">
+                    <img src="./image/course-acc-icon.svg" alt="requirements-gathering">
                   </div>
                   <div class="acc-head-contents">
                     <h3>Raw materials gathering</h3>
@@ -306,7 +323,7 @@ District</p> -->
               <div class="col-lg-12">
                 <div class="acc-left-content d-flex">
                   <div class="acc-icon">
-                    <img src="./image/course-acc-icon.svg" alt="">
+                    <img src="./image/course-acc-icon.svg" alt="industrial manufacturing">
                   </div>
                   <div class="acc-head-contents">
                     <h3>Industrial Manufacturing</h3>
@@ -384,7 +401,7 @@ District</p> -->
               <div class="col-lg-12">
                 <div class="acc-left-content d-flex">
                   <div class="acc-icon">
-                    <img src="./image/course-acc-icon.svg" alt="">
+                    <img src="./image/course-acc-icon.svg" alt="market shipping">
                   </div>
                   <div class="acc-head-contents">
                     <h3>Market Shipping</h3> 
@@ -431,10 +448,10 @@ District</p> -->
         </div>
       </div>
 
-      <div class="col-lg-6 offset-md-1 col-md-6" data-aos="zoom-in-left"  data-aos-once="true" data-aos-delay="55" data-aos-duration="1500">
+      <div  id="productline" class="col-lg-6 offset-md-1 col-md-6" data-aos="zoom-in-left"  data-aos-once="true" data-aos-delay="55" data-aos-duration="1500">
         <div class="aurthor-content">
           <!-- <span class="account">@something</span> -->
-          <h2 id="productline">OZZY</h2>
+          <h2>OZZY</h2>
           <p>Your <b>Expert</b> in <b style="color: #F01F26;">washing</b> and <b>cleaning</b>. <br>Made in Rwanda</p>
         </div>
       </div>
@@ -719,89 +736,92 @@ District</p> -->
 </div>
 </div>
   <!-- Vendor JS-->
-  <script src="./plugins/jquery/jquery.min.js"></script>
-  <script src="./plugins/jquery/jquery-migrate.min.js"></script>
-  <script src="./plugins/bootstrap-4.3.1/js/bootstrap.bundle.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js" integrity="sha512-3fMsI1vtU2e/tVxZORSEeuMhXnT9By80xlmXlsOku7hNwZSHJjwcOBpmy+uu+fyWwGCLkMvdVbHkeoXdAzBv+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   <!-- Plugins JS -->
-  <script src="./plugins/meanmenu/jquery.meanmenu.js"></script>
-  <script src="./plugins/slick-1.8.1/slick.min.js"></script>
-  <script src="./plugins/fancybox-master/jquery.fancybox.min.js"></script>
-  <script src="./plugins/aos-animation/aos.js"></script>
+  <script src="./plugins/meanmenu/jquery.meanmenu.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <script src="./plugins/slick-1.8.1/slick.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- Custom JS -->
   <script src="./js/active.js"></script>
   <script>
-// Variable to hold request
-var request;
-$('#contactForm').submit(function(e) {
+  // Variable to hold request
+  var request;
+  $('#contactForm').submit(function(e) {
 
-// Prevent default posting of form - put here to work in case of errors
-    event.preventDefault();
+  // Prevent default posting of form - put here to work in case of errors
+      event.preventDefault();
 
-    // Abort any pending request
-    if (request) {
-        request.abort();
-    }
-    // setup some local variables
-    var $form = $(this);
+      // Abort any pending request
+      if (request) {
+          request.abort();
+      }
+      // setup some local variables
+      var $form = $(this);
 
-	// Let's select and cache all the fields
-    var $inputs = $form.find("input, select, textarea");
-	
-	 // Serialize the data in the form
-    var serializedData = $form.serialize();
-	
-	// Let's disable the inputs for the duration of the Ajax request.
-    // Note: we disable elements AFTER the form data has been serialized.
-    // Disabled form elements will not be serialized.
-    $inputs.prop("disabled", true);
-	$(".loader").show();
-	// Fire off the request to /form.php
-    request = $.ajax({
-        url: "/sendmail.php",
-        type: "post",
-        data: serializedData
-    });
-	
-	 // Callback handler that will be called on success
-    request.done(function (response, textStatus, jqXHR){
-		
-		$(".loader").hide();
-		
-		$(".form-control").val('');
-		
-		$("#ResponseMessage").show();
-		$("#ResponseMessage p").text("Email sent successfully. We will get in touch with you shortly.");
-		
-		setTimeout(function() {
-			$("#ResponseMessage").hide();
-		}, 3000);
-		
-        // Log a message to the console
-        //console.log("Hooray, it worked!");
-    });
+    // Let's select and cache all the fields
+      var $inputs = $form.find("input, select, textarea");
+    
+    // Serialize the data in the form
+      var serializedData = $form.serialize();
+    
+    // Let's disable the inputs for the duration of the Ajax request.
+      // Note: we disable elements AFTER the form data has been serialized.
+      // Disabled form elements will not be serialized.
+      $inputs.prop("disabled", true);
+    $(".loader").show();
+    // Fire off the request to /form.php
+      request = $.ajax({
+          url: "/sendmail.php",
+          type: "post",
+          data: serializedData
+      });
+    
+    // Callback handler that will be called on success
+      request.done(function (response, textStatus, jqXHR){
+      
+      $(".loader").hide();
+      
+      $(".form-control").val('');
+      
+      $("#ResponseMessage").show();
+      $("#ResponseMessage p").text("Email sent successfully. We will get in touch with you shortly.");
+      
+      setTimeout(function() {
+        $("#ResponseMessage").hide();
+      }, 3000);
+      
+          // Log a message to the console
+          //console.log("Hooray, it worked!");
+      });
 
-    // Callback handler that will be called on failure
-    request.fail(function (jqXHR, textStatus, errorThrown){
-        // Log the error to the console
-		$("#ResponseMessage p").text("There were some issues with sending email. Please contact later.");
-         console.log(
-             "The following error occurred: "+
-             textStatus, errorThrown
-         );
-    });
+      // Callback handler that will be called on failure
+      request.fail(function (jqXHR, textStatus, errorThrown){
+          // Log the error to the console
+      $("#ResponseMessage p").text("There were some issues with sending email. Please contact later.");
+          console.log(
+              "The following error occurred: "+
+              textStatus, errorThrown
+          );
+      });
 
-    // Callback handler that will be called regardless
-    // if the request failed or succeeded
-    request.always(function () {
-        // Reenable the inputs
-		$(".loader").hide();
-        $inputs.prop("disabled", false);
-    });
+      // Callback handler that will be called regardless
+      // if the request failed or succeeded
+      request.always(function () {
+          // Reenable the inputs
+      $(".loader").hide();
+          $inputs.prop("disabled", false);
+      });
 
 
-});
+  });
     </script>
 </body>
 

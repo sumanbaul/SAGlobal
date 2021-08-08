@@ -21599,7 +21599,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -21608,6 +21608,7 @@ body {
   line-height: 1.6;
   color: #1f1f1f;
   background: #fff;
+  overflow-x: hidden;
 }
 
 .site-wrapper {
@@ -21655,14 +21656,16 @@ h4 {
   font-size: 24px;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 16px;
   line-height: 26px;
   letter-spacing: 0;
 }
 
 @media (min-width: 768px) {
-  h5, .h5 {
+  h5,
+  .h5 {
     font-size: 21px;
   }
 }
@@ -21694,8 +21697,8 @@ a:visited {
   text-decoration: none;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -21734,7 +21737,7 @@ span {
 .btn:focus,
 .btn:active {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 button {
@@ -21786,28 +21789,28 @@ input[type="number"] {
 
 /* Buttons */
 .btn {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   letter-spacing: -1.12px;
   font-weight: 700;
   font-size: 18px;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   border-radius: 3px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   height: 50px;
 }
 
 .btn--primary {
   background-color: #4ebe86;
-  color: #FFF;
+  color: #fff;
 }
 
 .btn--primary:hover {
@@ -21886,8 +21889,8 @@ input[type="number"] {
 }
 
 .btn--hover-shine:before {
-  content: '';
-  content: '';
+  content: "";
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -21917,11 +21920,11 @@ input[type="number"] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .text--primary {
@@ -21965,12 +21968,12 @@ input[type="number"] {
 
 .rotate-45 {
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .form-control:focus {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .shape-holder {
@@ -22002,46 +22005,47 @@ input[type="number"] {
 
 .animate-spin {
   -webkit-animation-name: spin;
-          animation-name: spin;
+  animation-name: spin;
   -webkit-animation-duration: 6000ms;
-          animation-duration: 6000ms;
+  animation-duration: 6000ms;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
 }
 
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @-webkit-keyframes pulse-animation {
   0% {
     -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0)
+      scale(1.5);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
     opacity: 0;
   }
 }
@@ -22049,12 +22053,13 @@ input[type="number"] {
 @keyframes pulse-animation {
   0% {
     -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
-            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0)
+      scale(1.5);
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
     opacity: 0;
   }
 }
